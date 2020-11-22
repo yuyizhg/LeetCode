@@ -1,3 +1,5 @@
+nums = [1, 2, 3, 4]
+
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
 
