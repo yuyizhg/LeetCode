@@ -3,15 +3,10 @@ nums = [1, 2, 3, 4]
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
 
-        output = [None] * len(nums)
+        num = [None] * len(nums)
+        num[0] = nums[0]
+        for index, value in enumerate(nums):
+            if index != 0:
+                num[index] = num[(index - 1)] + nums[index]
 
-        for index, _ in enumerate(nums):
-            result = 0
-            i = 0
-            while i <= index:
-                result = result + nums[i]
-                i = i + 1
-
-            output[index] = result
-
-        return output
+        return num
